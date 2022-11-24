@@ -3,7 +3,6 @@ import random
 class MasterMind():
     """
     Osztály, mely kezeli a Kitalálós játék példányát.
-
     """
 
     def __init__(self, level: int):
