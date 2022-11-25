@@ -8,7 +8,7 @@ Ez a program egy szám kitalálós játék.
 3. szint: 4 számjegyű számot kell kitalálni 10 lépés alatt
 Minden lépés után a program visszajelzést ad, hogy eltaláltad-e akár az egyik számot vagy sem
 
-
+-----------------------
 
 Felhasznált modulok:
 
@@ -18,7 +18,7 @@ random (tanult)
 
 Sajat_modul (saját)
 
-
+-----------------------
 
 Saját függvények:
 
@@ -28,7 +28,7 @@ random_digit_generator
 
 player2_turn
 
-
+-----------------------
 
 Saját osztály:
 
