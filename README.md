@@ -1,5 +1,5 @@
 Vastag Balázs - B2HFV9
-
+-----------------------
 A program rövid leírása:
 Ez a program egy szám kitalálós játék.
 3 szintből lehet választani: 
