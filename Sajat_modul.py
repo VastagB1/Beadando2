@@ -7,7 +7,6 @@ class MasterMind():
 
     def __init__(self, level: int):
         """
-        Constructor for setting up the difficulty level, number of digits and iterations of the game
         Nehezségi szintet, számok mennyiségét és a játék ismetlését felállító konstruktor
         """
         self.level = level
@@ -29,19 +28,16 @@ class MasterMind():
 
     def checker(self, guess: int, digits: int):
         """
-        checks if the guess of Player 2 matches the length of the set value
         Itt nézzük meg, hogy a második játékos(te) által beírt szám hossza megfelelő e
         """
 
         if len(str(guess)) != digits:
-            print("You havent entered desired number of digits, hence you are disqualified from the game"
-                  "Nem megfelelő mennyiségű számot adtál meg, ezért számodra végetért a játék")
+            print("Nem megfelelő mennyiségű számot adtál meg, ezért számodra végetért a játék")
             quit()
 
     @staticmethod
     def random_digit_generator(digits: int) -> int:
         """
-        Generates a random multi digit number from the Player 1's side
         Generál egy random többszámjegyű számot az első játékosnak(gép)
         """
         try:
@@ -54,17 +50,14 @@ class MasterMind():
 
     def player2_turn(self, digits: int, set_value: int, attempts: int):
         """
-        Attempts of the Player 2
-        Itt kezdődik a második játékos(te) próbálkozásai
+        Itt kezdődik a második játékos(te) próbálkozása
         """
-        print("Enter a number"
-              "Adjon meg egy számot")
+        print("Adjon meg egy számot")
         guess = int(input(": "))
         self.checker(guess, digits)
 
         if guess == set_value:
-            print("You are a mastermind! Guessed the number in the very first attempt!"
-                  "Egy zseni vagy! Első próbálkozásra eltaláltad a számot!")
+            print("Egy zseni vagy! Első próbálkozásra eltaláltad a számot!")
             quit()
 
         else:
@@ -81,27 +74,21 @@ class MasterMind():
                         count += 1
 
                 if count != 0 and count < digits:
-                    print(f"Not quite the number! You did get {count} digit(s) right"
-                          f"Csak részlegesen találtad el a számot! {count} szám(ot) találtál el")
+                    print(f"Csak részlegesen találtad el a számot! {count} szám(ot) találtál el")
                     print(output)
-                    print("\nEnter your next choice of numbers:"
-                          "\nÍrd be a következő próbálkozásod:")
+                    print("\nÍrd be a következő próbálkozásod:")
                     guess = int(input(": "))
                     self.checker(guess, digits)
 
                 elif count == 0:
-                    print("None of the numbers in your input match"
-                          "Egyetlen számot sem találtál el")
-                    print("\nEnter your next choice of numbers:"
-                          "\nÍrd be a következő próbálkozásod:")
+                    print("Egyetlen számot sem találtál el")
+                    print("\nÍrd be a következő próbálkozásod:")
                     guess = int(input(": "))
                     self.checker(guess, digits)
 
                 elif count == digits:
-                    print("You've become a mastermind!"
-                          "Nagyon ügyes vagy!! Eltaláltad a számot")
-                    print(f"You guessed the number in {ctr} attempts"
-                          f"{ctr} próbálkozás alatt eltaláltad a számot!")
+                    print("Nagyon ügyes vagy!! Eltaláltad a számot")
+                    print(f"{ctr} próbálkozás alatt eltaláltad a számot!")
                     quit()
                 ctr += 1
             print("Game Over!")
